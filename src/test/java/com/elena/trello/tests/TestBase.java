@@ -1,20 +1,22 @@
 package com.elena.trello.tests;
 
 import com.elena.trello.manager.ApplicationManager;
+import com.elena.trello.utils.Listener;;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.*;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
+@Listeners (Listener.class)
 public class TestBase {
-  protected static ApplicationManager app = new ApplicationManager();
-Logger logger = LoggerFactory.getLogger(TestBase.class);
+  public static ApplicationManager app = new ApplicationManager();
+  Logger logger = LoggerFactory.getLogger(TestBase.class);
+
+
+
 @BeforeMethod
 public void startTestLog(Method m, Object[] parameter){
   logger.info("Start test " + m.getName()

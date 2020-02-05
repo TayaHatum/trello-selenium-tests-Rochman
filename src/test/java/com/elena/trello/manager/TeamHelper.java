@@ -22,10 +22,6 @@ public class TeamHelper extends  HelperBase{
     click(By.cssSelector("[name='close']"));
   }
 
-  public void fillTeamCreationForm(TeamData teamData) {
-    type(By.cssSelector("[data-test-id='header-create-team-name-input']"), teamData.getTeamName());
-    type(By.cssSelector("[id$= description]"), teamData.getTeamDescr());
-  }
 
   public void selectCreateTeamFromDropDown() {
     click(By.cssSelector("[data-test-id='header-create-team-button']"));
@@ -33,6 +29,13 @@ public class TeamHelper extends  HelperBase{
 
   public void clickLaterButton() {
     click(By.cssSelector("[data-test-id=show-later-button]"));
+  }
+
+  public void fillTeamCreationForm(TeamData teamData){
+    type(By.cssSelector("[data-test-id='header-create-team-type-input']"), teamData.getTeamName());
+    click(By.cssSelector("[data-test-id='header-create-team-type-input']"));
+    click(By.xpath("//*[contains(text(), 'Sales')]"));
+    type(By.cssSelector("[id$=description]"),teamData.getTeamDescr());
   }
 
 

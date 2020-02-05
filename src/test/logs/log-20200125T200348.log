@@ -1,0 +1,8 @@
+2020-01-25 20:03:56,925 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:20] Start test testBoardCreationFromHeaderFromCSV with parameters [BoardData boardName='1'}]
+2020-01-25 20:05:15,606 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:26] Stop test testBoardCreationFromHeaderFromCSV
+2020-01-25 20:05:15,608 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:20] Start test testBoardCreationFromHeaderFromCSV with parameters [BoardData boardName='q'}]
+2020-01-25 20:05:32,668 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:26] Stop test testBoardCreationFromHeaderFromCSV
+2020-01-25 20:05:32,669 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:20] Start test testBoardCreationFromHeaderFromCSV with parameters [BoardData boardName='New Board Name'}]
+2020-01-25 20:05:49,715 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:26] Stop test testBoardCreationFromHeaderFromCSV
+2020-01-25 20:05:49,717 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:20] Start test testBoardCreationFromHeaderFromCSV with parameters [BoardData boardName='Lorem ipsum dolor sit amet'}]
+2020-01-25 20:06:07,023 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:26] Stop test testBoardCreationFromHeaderFromCSV

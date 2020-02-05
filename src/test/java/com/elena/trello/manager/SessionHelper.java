@@ -2,8 +2,13 @@ package com.elena.trello.manager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import java.io.File;
+import java.util.ArrayList;
 
 public class SessionHelper extends HelperBase{
+
   HeaderHelper header = new HeaderHelper(wd);
   public SessionHelper(WebDriver wd) {
     super(wd);
@@ -29,6 +34,7 @@ public class SessionHelper extends HelperBase{
   }
 
   public void clickLoginLink(){
+
     click(By.cssSelector("[href='/login']"));
   }
 
@@ -72,5 +78,67 @@ public class SessionHelper extends HelperBase{
 
   public void clickLogoutButton() {
     click(By.cssSelector("[data-test-id='header-member-menu-logout']"));
+  }
+
+  public void opebUserProfileFromDropDown() {
+   click(By.cssSelector(""));
+   // data-test-id='header-member-profile'
+  }
+
+  public void goTOAtlassianAccaunt() {
+    click(By.cssSelector("http"));
+    wd.getWindowHandle();
+    wd.switchTo();
+  }
+
+
+  public  void addImage() {
+  }
+
+  public void clickOnAvatar() {
+    click(By.cssSelector("[data-test-id='header-member-menu-button']"));
+  }
+
+  public void openProfileAndVisibility() {
+    click(By.cssSelector("[data-test-id='header-member-menu-profile']"));
+  }
+
+  public void openAndSwitchToAtlassianProfile() {
+    click(By.cssSelector("[href $=manage-profile]"));
+    String trellow = wd.getWindowHandle();
+//    System.out.println(trellow);
+    ArrayList<String> availableWindows = new ArrayList(wd.getWindowHandles());
+    if (!availableWindows.isEmpty()) {
+      wd.switchTo().window(availableWindows.get(1));
+    }
+  }
+
+  public void addPictureAndCloseWindow() throws InterruptedException {
+
+    //Actions ac = new Actions(wd);
+    //as.moveToEkeveyn
+    //perform - step by step
+    new Actions(wd)
+            .moveToElement(wd.findElement(By.cssSelector("[data-test-selector='profile-avatar']"))).perform();
+    click(By.cssSelector("[data-test-selector='profile-hover-info']"));
+    if (isElementPresent(By.cssSelector("[role=menu]"))) {
+      click(By.xpath("//*[@role='menu']//span[@role='menuitem'][1]"));
+    }
+    attach(By.id("image-input"), new File("C:/Users/Elena/Documents/GitHub/trello-selenium-tests-Rochman/src/test/resources/2014-03-22 10.57.26.jpg"));
+    click(By.xpath("//*[contains(text(),'Upload')]"));
+    pause(5000);
+    wd.close();
+    pause(3000);
+    ArrayList<String> availableWindows = new ArrayList(wd.getWindowHandles());
+    if (!availableWindows.isEmpty()) {
+      wd.switchTo().window(availableWindows.get(0));
+      pause(5000);
+      wd.navigate().refresh();
+      pause(5000);
+    }
+  }
+ public void attachFile ( By locator, File file){
+    wd.findElement(locator).sendKeys(file.getAbsolutePath());
+
   }
 }

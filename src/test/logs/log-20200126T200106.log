@@ -1,0 +1,12 @@
+2020-01-26 20:01:14,068 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:22] Start test testBoardCreationFromHeaderFromCSV with parameters [BoardData boardName='1'}]
+2020-01-26 20:02:43,561 INFO [Test worker] c.e.t.u.Listener [Listener.java:20] testBoardCreationFromHeaderFromCSVPassed Successful
+2020-01-26 20:02:43,563 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:28] Stop test testBoardCreationFromHeaderFromCSV
+2020-01-26 20:02:43,569 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:22] Start test testBoardCreationFromHeaderFromCSV with parameters [BoardData boardName='q'}]
+2020-01-26 20:03:00,317 INFO [Test worker] c.e.t.u.Listener [Listener.java:20] testBoardCreationFromHeaderFromCSVPassed Successful
+2020-01-26 20:03:00,318 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:28] Stop test testBoardCreationFromHeaderFromCSV
+2020-01-26 20:03:00,319 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:22] Start test testBoardCreationFromHeaderFromCSV with parameters [BoardData boardName='New Board Name'}]
+2020-01-26 20:03:17,259 INFO [Test worker] c.e.t.u.Listener [Listener.java:20] testBoardCreationFromHeaderFromCSVPassed Successful
+2020-01-26 20:03:17,260 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:28] Stop test testBoardCreationFromHeaderFromCSV
+2020-01-26 20:03:17,261 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:22] Start test testBoardCreationFromHeaderFromCSV with parameters [BoardData boardName='Lorem ipsum dolor sit amet'}]
+2020-01-26 20:03:34,655 INFO [Test worker] c.e.t.u.Listener [Listener.java:20] testBoardCreationFromHeaderFromCSVPassed Successful
+2020-01-26 20:03:34,657 INFO [Test worker] c.e.t.t.TestBase [TestBase.java:28] Stop test testBoardCreationFromHeaderFromCSV

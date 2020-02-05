@@ -1,6 +1,7 @@
 package com.elena.trello.tests;
 
 import com.elena.trello.model.TeamData;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -96,5 +97,6 @@ int teamCountAfter = app.getTeam().getTeamsCount();
     int teamCountAfter = app.getTeam().getTeamsCount();
     Assert.assertEquals(teamCountAfter, teamCountBefore+1);
   }
+
 
 }
