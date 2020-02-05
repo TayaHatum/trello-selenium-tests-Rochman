@@ -67,7 +67,7 @@ public class SessionHelper extends HelperBase{
   public void logout() throws InterruptedException {
     header.clickOnAvatar();
     clickLogoutButton();
-    pause(1000);
+    pause(10000);
 
   }
 
