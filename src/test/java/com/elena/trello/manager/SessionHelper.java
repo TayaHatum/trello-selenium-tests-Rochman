@@ -14,6 +14,8 @@ public class SessionHelper extends HelperBase{
     super(wd);
   }
 
+  ////////////
+
   public void fillLoginFormAtlassianAcc(String user, String pwd) throws InterruptedException {
     type(By.id("user"), user);
     pause(5000);
@@ -27,6 +29,8 @@ public class SessionHelper extends HelperBase{
   public void confirmLogin() {
         click(By.id("login"));
   }
+
+  ///////////////////////////////////////////
 
   public void fillLoginFormOldAcc(String userName, String password) {
     type(By.id("user"), userName);
@@ -60,9 +64,11 @@ public class SessionHelper extends HelperBase{
             (By.cssSelector("[data-test-id='header-member-menu-button']"));
   }
 
-  public void logout() {
+  public void logout() throws InterruptedException {
     header.clickOnAvatar();
     clickLogoutButton();
+    pause(1000);
+
   }
 
   public void loginAtlassianAcc() throws InterruptedException {
